@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --color-theme: #20D3C2;
+    --color-theme-light: #EDFCFA;
+    --color-theme-dark: #0E153D; 
+    --color-dark: #080C24; 
+    --color-white: #FFFFFF;
+    --color-gray-0: #AAAAAA;
+    --color-gray-1: #CCCCCC;
+    --color-gray-2: #E3E3E3;
+    --color-gray-3: #EEEEEE;
+    --color-gray-4: #F6F6F6;
+    --color-product-instock: #82D8C6;
+    --color-product-outofstock: #FE6C6C;
+
+    --font-play: 'Play', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-size-14: 1.17rem;
+    --font-size-16: 1.33rem;
+    --font-size-18: 1.50rem;
+    --font-size-24: 2rem;
+    --font-size-36: 3rem;
+    --font-size-60: 5rem;
+
+    --border-radius-small: 8px;
+    --border-radius-medium: 25px;
+    --border-radius-rounded: 50%;
+}
+
+/*----------------------------- General -----------------------------*/ 
+html, body {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: var(--font-roboto);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-theme-dark);
+}
+
+
+.btn-theme {
+    background-color: var(--color-theme);
+    color: var(--color-white);
+    border-radius: var(--border-radius-medium);
+    font-weight: var(--font-weight-medium);
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .btn-theme:hover{
+    background-color: var(--color-theme-dark);
+    color: var(--color-white);
+  }
+
+  .btn-showcase {
+    background-color: var(--color-white);
+    color: var(--color-theme);
+    border-radius: var(--border-radius-medium);
+    font-weight: var(--font-weight-medium);
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .btn-showcase:hover{
+    background-color: var(--color-theme-dark);
+    color: var(--color-white);
+  }
+/*----------------------------- Helpers -----------------------------*/ 
+.j-c {
+    justify-content: space-between;
+}
+
+.a-i {
+    align-items: center;
+}
+
+/*----------------------------- header-top -----------------------------*/
+.header-top {
+    background-color: #20D3C2;
+    color: var(--color-white);
+    height: 40px;
+  }
+
+  .header-top > .container {
+    height: 100% ;
+    padding: 0;
+  }
+
+  .header-top .site-settings {
+    flex: 2;
+    display: flex;
+    padding: 0.7rem;
+  }
+
+  .header-top .site-settings .dropdown-theme{
+    background-color:  var(--color-theme);
+    color: var(--color-white);
+  }
+
+  .header-top .site-settings .dropdown-theme button{
+    background-color:  var(--color-theme);
+    color: var(--color-white);
+    border: none;
+    padding: 0;
+  } 
+
+  .header-top .site-settings .dropdown-theme button:hover{
+    color: var(--color-theme-dark)
+  }
+
+  .header-top .site-settings .dropdown-theme .dropdown-menu {
+    background-color:  var(--color-theme);
+    color: var(--color-white);
+    border: none;
+    width: 250px;
+    margin-top: 3rem;
+  }
+
+  .header-top .site-settings .dropdown-theme .dropdown-menu .dropdown-item {
+    background-color:  var(--color-theme);
+    color: var(--color-white);
+    border: none;
+    width: 80%;
+    margin: 0;
+  }
+
+  .header-top .site-settings .dropdown-theme .dropdown-menu .dropdown-item:hover{
+    background-color:  var(--color-theme);
+    color: var(--color-theme-dark);
+    font-weight: bold;
+  }
+
+  .header-top .header-top-links a{
+    color: var(--color-white);
+    text-decoration: none;
+    margin: 1rem;
+  }
+
+  .header-top .header-top-links a:hover{
+    color: var(--color-theme-dark);
+  }
+
+  .header-top .header-top-links .social-media{
+    flex: 7;
+    margin-left: 1rem;
+    margin-right: 0.7rem;
+  }
+
+  .header-top .header-top-links .social-media a {
+    margin: 0 0.3rem;
+  }
+
+  .header-top .header-top-links .social-media a:last-child{
+    margin:  0 0 0 0.3rem;
+  }
+
+/*----------------------------- header-center -----------------------------*/
+.header-center{
+    background-color: var(--color-white); 
+    height: 6.625rem;
+    padding:  0;
+}
+
+.header-center > .container{
+    height: 100%;
+    padding-top: 2.2rem;
+    padding-bottom: 2.2rem;
+}
+
+.header-center .brand{
+    flex: 2;
+}
+
+.header-center .search{
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 60px 0 60px;
+}
+
+.header-center .search .search-bar{
+    flex: 20;
+    border: solid 0.5px var(--color-gray-2);
+    border-radius: 10px 0 0 10px;
+}
+.header-center .search i{
+    flex: 1;
+    margin: 2px;
+    background-color: var(--color-theme);
+    background-size: 150px;
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+}
+
+.header-center .links{
+    flex: 3;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.header-center .links .link {
+    text-decoration: none;
+    color: var(--color-theme-dark);
+    margin: 0 0.6rem;
+}
+
+.header-center .links .link:hover {
+    color: var(--color-theme);
+}
+
+.header-center .links .link:last-child{
+    margin: 0;
+}
+
+.header-center .links .link i{
+     font-size: var(--font-size-16);
+}
+
+/*----------------------------- header-bottom -----------------------------*/
+.header-bottom {
+    background-color: var(--color-white);
+}
+.header-bottom > nav {    
+    border-top: solid 0.8px var(--color-gray-2);
+    border-bottom: solid 0.8px var(--color-gray-2); 
+}
+
+.header-bottom > nav > .container {     
+    height: 100%;
+}
+.header-bottom nav .categories {
+    flex: 2;
+}
+
+.header-bottom nav .offer {
+    flex: 7;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.header-bottom .categories {
+    background-color:  var(--color-theme);
+    color: var(--color-white);
+  }
+
+  .header-bottom .categories button {
+    background-color:  var(--color-theme);
+    color: var(--color-white);
+    font-size: 1rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.6rem 1rem;
+  }
+
+  .header-bottom .categories button:hover {
+    background-color: var(--color-theme-dark);
+    color: var(--color-white);
+  }
+
+  .header-bottom .categories button span {
+    display: flex;
+  }
+
+  .header-bottom .categories button i {
+    font-size: 1.4em;
+  }
+
+  .header-bottom .categories .dropdown-menu {
+    background-color:  var(--color-theme);
+    color: var(--color-white);
+    border: none;
+    width: 250px;
+    margin-top: 3rem;
+  }
+
+  .header-bottom .categories .dropdown-menu .dropdown-item {
+    background-color:  var(--color-theme);
+    color: var(--color-white);
+    border: none;
+    margin: 0;
+  }
+
+  .header-bottom .categories .dropdown-menu .dropdown-item:hover{
+    background-color:  var(--color-theme);
+    color: var(--color-theme-dark);
+    font-weight: bold;
+  }
+
+/*----------------------------- showcase -----------------------------*/
+.showcase {
+background-color: var(--color-gray-3);
+}
+
+.showcase > .container {
+height: 100%;
+}
+
+.showcase .showcase-content h1{
+  font-family: var(--font-play);
+  font-size: var(--font-size-60);
+}
+
+.showcase .showcase-content h1 strong{
+  color: var(--color-theme);
+}
+
+
+/*----------------------------- responsive xxs-350px -----------------------------*/
+@media (min-width: 1px) {
+          /*---------------- header ----------------*/
+  header{
+    display: none;
+  }    
+  mobile{
+    display: inline;
+  }
+  .header-responsive > .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  .header-responsive{
+  background-color: var(--color-white); 
+  height: 4rem;
+  }
+
+  .mobile-navbar {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: solid 0.8px var(--color-gray-2);
+    border-bottom: solid 0.8px var(--color-gray-2); 
+  }
+
+  .mobile-navbar button {
+    height: 2.3rem;
+    width: 2.3rem;
+    color: var(--color-white);
+    background-color: var(--color-theme);
+    border: solid;
+  }
+  .mobile-navbar button:hover {
+    background-color: var(--color-theme-dark);
+  }  
+
+  /* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+  height: 80%;
+  width: 0;
+  position: fixed ; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: var(--color-theme); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.1s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: left; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* Position the content inside the overlay */
+.overlay-content .social-media {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  align-items: center;
+  padding: 5px;
+  text-decoration: none;
+  font-size: var(--font-size-16);
+  color: var(--color-white);
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: var(--color-theme-dark);
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 50px;
+}
+
+
+          /*---------------- showcase ----------------*/
+  .showcase .showcase-content h1{
+    font-family: var(--font-play);
+    font-size: var(--font-size-16);
+  }
+  .showcase .showcase-content p{
+    display: none;
+  }
+  .showcase img{
+    display: block;
+    width: 60%;
+  }
+}
+
+/*----------------------------- responsive xs-578px -----------------------------*/
+@media (min-width: 578px) {
+  /*---------------- header ----------------*/
+header{
+display: none;
+}    
+mobile{
+display: inline;
+}
+.header-responsive > .container{
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 100%;
+}
+.header-responsive{
+background-color: var(--color-white); 
+height: 4rem;
+}
+
+.mobile-navbar {
+width: 100%;
+height: 3rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-top: solid 0.8px var(--color-gray-2);
+border-bottom: solid 0.8px var(--color-gray-2); 
+}
+
+.mobile-navbar button {
+height: 2.3rem;
+width: 2.3rem;
+color: var(--color-white);
+background-color: var(--color-theme);
+border: solid;
+}
+.mobile-navbar button:hover {
+background-color: var(--color-theme-dark);
+}  
+
+/* The Overlay (background) */
+.overlay {
+/* Height & width depends on how you want to reveal the overlay (see JS below) */    
+height: 80%;
+width: 0;
+position: fixed ; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+background-color: rgb(0,0,0); /* Black fallback color */
+background-color: var(--color-theme); /* Black w/opacity */
+overflow-x: hidden; /* Disable horizontal scroll */
+transition: 0.1s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+
+position: relative;
+top: 10%; /* 25% from the top */
+width: 100%; /* 100% width */
+text-align: left; /* Centered text/links */
+margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* Position the content inside the overlay */
+.overlay-content .social-media {
+display: flex;
+justify-content: left;
+align-items: center;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+align-items: center;
+padding: 5px;
+text-decoration: none;
+font-size: var(--font-size-16);
+color: var(--color-white);
+display: block; /* Display block instead of inline */
+transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+color: var(--color-theme-dark);
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+position: absolute;
+top: 20px;
+right: 45px;
+font-size: 60px;
+}
+
+  /*---------------- showcase ----------------*/
+  .showcase .showcase-content h1{
+    font-family: var(--font-play);
+    font-size: var(--font-size-24);
+  }
+  .showcase .showcase-content p{
+    display: none;
+  }
+  .showcase img{
+    display: block;
+    width: 65%;
+  }
+}
+
+/*----------------------------- responsive md-768px -----------------------------*/
+@media (min-width: 768px) {
+  /*---------------- header ----------------*/
+  header {
+  display: inline;
+  }
+  mobile{
+  display: none;
+  }  
+
+   .header-center .links span{
+    display: none;
+  }
+  .header-bottom .dropdown button span{
+    display: none;
+  }
+
+  /*---------------- showcase ----------------*/ 
+  .showcase .showcase-content h1{
+    font-family: var(--font-play);
+    font-size: var(--font-size-36);
+  }
+  .showcase .showcase-content p{
+    display: block;
+  }
+  
+  .showcase img{
+    display: block;
+    width: 60%;
+  }
+}
+
+/*----------------------------- responsive lg-992px -----------------------------*/
+@media (min-width: 992px) {
+  /*---------------- header ----------------*/
+  header {
+  display: inline;
+  }
+  mobile{
+  display: none;
+  }  
+
+  /*---------------- showcase ----------------*/ 
+  .showcase .showcase-content h1{
+    font-size: var(--font-size-36);
+  }
+  .showcase img{
+    display: block;
+    width: 60%;
+  }
+}
+/*----------------------------- responsive xl-1200px -----------------------------*/
+@media (min-width: 1200px) {
+  /*---------------- header ----------------*/
+  header {
+  display: inline;
+  }
+  mobile{
+  display: none;
+  }  
+
+  .header-center .links span{
+    display: inline;
+  }
+  .header-bottom .dropdown button span{
+    display: inline;
+  }
+
+
+    /*---------------- showcase ----------------*/ 
+  .showcase img{
+  display: block;
+  }
+  .showcase .showcase-content h1 {
+  font-size: var(--font-size-60);
+  }
+}
