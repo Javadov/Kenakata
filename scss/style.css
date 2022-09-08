@@ -312,6 +312,52 @@ html, body {
   color: var(--color-theme);
 }
 
+/*----------------------------- boxbar -----------------------------*/
+.boxbar {
+  padding: 4rem 0;
+}
+
+.boxbar .container {
+  max-width: 1600px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 8.56rem;
+}
+
+.boxbar .info-box {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-theme-light);
+  margin: 0 0.8rem;
+  flex: 1;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.boxbar .info-box h6 {
+  color: var(--color-theme);
+}
+
+.boxbar .info-box img {
+  margin: 0.6rem;
+}
+
+.boxbar .info-box:hover {
+  background-color: var(--color-theme);
+  color: var(--color-white);
+}
+
+.boxbar .info-box:hover h6 {
+  color: var(--color-white);
+}
+
+.boxbar .info-box:hover img {
+  filter: brightness(1000%);
+}
+
 /*----------------------------- responsive xxs-350px -----------------------------*/
 @media (min-width: 1px) {
   /*---------------- header ----------------*/
@@ -412,6 +458,38 @@ html, body {
     width: 60%;
   }
 }
+/*---------------- boxbar ----------------*/
+.boxbar > .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  justify-content: space-between;
+}
+
+.boxbar .info-box {
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: var(--color-theme-light);
+  margin: 0 0.2rem;
+  flex: 1;
+  border-radius: 5px;
+}
+
+.boxbar .info-box h6 {
+  font-size: 0.9rem;
+}
+
+.boxbar .info-box img {
+  margin: 0.6rem;
+  width: 20%;
+}
+
+.boxbar .info-box p {
+  display: none;
+}
+
 /*----------------------------- responsive xs-578px -----------------------------*/
 @media (min-width: 578px) {
   /*---------------- header ----------------*/
@@ -558,6 +636,21 @@ html, body {
     width: 60%;
   }
 }
+/*---------------- boxbar ----------------*/
+/*
+.boxbar .info-box{
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill minmax(200px, 300px));
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-theme-light);
+  margin: 0 0.8rem;
+  flex: 1;
+  border-radius: 5px;
+  font-size: 1rem;
+}         
+*/
 /*----------------------------- responsive xl-1200px -----------------------------*/
 @media (min-width: 1200px) {
   /*---------------- header ----------------*/
