@@ -68,6 +68,27 @@ html, body {
     background-color: var(--color-theme-dark);
     color: var(--color-white);
   }
+
+  .section-title{
+    padding: 3rem 0;
+    color: var(--color-theme-dark);
+    text-align: center;
+  }
+
+  .section-title h1{
+    font-family: var(--font-play);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-36);
+  }
+
+  .section-title h1 span{
+    color: var(--color-theme);
+  }
+
+  .section-title p{
+    margin:  1rem 0;
+  }
+
 /*----------------------------- Helpers -----------------------------*/ 
 .j-c {
     justify-content: space-between;
@@ -299,10 +320,6 @@ html, body {
 background-color: var(--color-gray-3);
 }
 
-.showcase > .container {
-height: 100%;
-}
-
 .showcase .showcase-content h1{
   font-family: var(--font-play);
   font-size: var(--font-size-60);
@@ -357,152 +374,217 @@ height: 100%;
   filter: brightness(1000%);
 }
 
-/*----------------------------- responsive xxs-350px -----------------------------*/
-@media (min-width: 1px) {
-          /*---------------- header ----------------*/
-  header{
-    display: none;
-  }    
-  mobile{
-    display: inline;
-  }
-  .header-responsive > .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-  }
-  .header-responsive{
-  background-color: var(--color-white); 
-  height: 4rem;
-  }
+/*----------------------------- shop-by-category -----------------------------*/
 
-  .mobile-navbar {
-    width: 100%;
-    height: 3rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: solid 0.8px var(--color-gray-2);
-    border-bottom: solid 0.8px var(--color-gray-2); 
-  }
+.shop-by-category{
 
-  .mobile-navbar button {
-    height: 2.3rem;
-    width: 2.3rem;
-    color: var(--color-white);
-    background-color: var(--color-theme);
-    border: solid;
-  }
-  .mobile-navbar button:hover {
-    background-color: var(--color-theme-dark);
-  }  
-
-  /* The Overlay (background) */
-.overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */    
-  height: 80%;
-  width: 0;
-  position: fixed ; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: var(--color-theme); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.1s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
-
-/* Position the content inside the overlay */
-.overlay-content {
-  
-  position: relative;
-  top: 10%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: left; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
-}
-
-/* Position the content inside the overlay */
-.overlay-content .social-media {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-}
-
-/* The navigation links inside the overlay */
-.overlay a {
-  align-items: center;
-  padding: 5px;
-  text-decoration: none;
-  font-size: var(--font-size-16);
-  color: var(--color-white);
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
-}
-
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-  color: var(--color-theme-dark);
-}
-
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  font-size: 50px;
-}
-
-
-          /*---------------- showcase ----------------*/
-  .showcase .showcase-content h1{
-    font-family: var(--font-play);
-    font-size: var(--font-size-16);
-  }
-  .showcase .showcase-content p{
-    display: none;
-  }
-  .showcase img{
-    display: block;
-    width: 60%;
-  }
-}
-          /*---------------- boxbar ----------------*/
-
-.boxbar>.container{
+.shop-by-category .grid{
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  justify-content: space-between;
+  grid-template-columns: repeat(5, 249px);
+  grid-template-rows: repeat(3, 249px);
+  gap: 0.8rem;
 }
 
-.boxbar .info-box{
-  height: 100%;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  background-color: var(--color-theme-light);
-  margin: 0 0.2rem;
-  flex: 1;
-  border-radius: 5px;
-}         
-.boxbar .info-box h6{
-  font-size: 0.9rem;
+#category-box-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
-.boxbar .info-box img{
-  margin: 0.6rem;
-  width: 20%;
+#category-box-2 {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
 }
 
-.boxbar .info-box p{
-  display: none;
+#category-box-3 {
+  grid-column: 4 / -1;
+  grid-row: 1 / 3;
+}
+
+#category-box-4 {
+  grid-column: 1 / 3;
+  grid-row: 2 / -1;
+}
+#category-box-5 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+#category-box-6 {
+  grid-column: 3 / 5;
+  grid-row: 3 / -1;
+}
+
+#category-box-7 {
+  grid-column: 5 / -1;
+  grid-row: 3 / -1;
+}
+
+.shop-by-category .category-box{
+  background-color: var(--color-gray-1);
+  border: 1px solid;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.shop-by-category .category-box .category-box-title{
+  width: 50%;
+  
+  background-color: var(--color-theme-dark);
+  color: var(--color-theme);
+  padding: 0.5rem 1rem;
+  font-weight: var(--font-weight-medium);
+}
+
+
+/*----------------------------- responsive xxs-350px -----------------------------*/
+@media only screen and (min-width: 1px) and (max-width: 577px){
+            /*---------------- header ----------------*/
+    header{
+      display: none;
+    }    
+    mobile{
+      display: inline;
+    }
+    .header-responsive > .container{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+    .header-responsive{
+    background-color: var(--color-white); 
+    height: 4rem;
+    }
+
+    .mobile-navbar {
+      width: 100%;
+      height: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: solid 0.8px var(--color-gray-2);
+      border-bottom: solid 0.8px var(--color-gray-2); 
+    }
+
+    .mobile-navbar button {
+      height: 2.3rem;
+      width: 2.3rem;
+      color: var(--color-white);
+      background-color: var(--color-theme);
+      border: solid;
+    }
+    .mobile-navbar button:hover {
+      background-color: var(--color-theme-dark);
+    }  
+
+    /* The Overlay (background) */
+  .overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+    height: 80%;
+    width: 0;
+    position: fixed ; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: var(--color-theme); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.1s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  }
+
+  /* Position the content inside the overlay */
+  .overlay-content {
+    
+    position: relative;
+    top: 10%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: left; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+  }
+
+  /* Position the content inside the overlay */
+  .overlay-content .social-media {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+
+  /* The navigation links inside the overlay */
+  .overlay a {
+    align-items: center;
+    padding: 5px;
+    text-decoration: none;
+    font-size: var(--font-size-16);
+    color: var(--color-white);
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+  }
+
+  /* When you mouse over the navigation links, change their color */
+  .overlay a:hover, .overlay a:focus {
+    color: var(--color-theme-dark);
+  }
+
+  /* Position the close button (top right corner) */
+  .overlay .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 50px;
+  }
+
+
+            /*---------------- showcase ----------------*/
+    .showcase .showcase-content h1{
+      font-family: var(--font-play);
+      font-size: var(--font-size-16);
+    }
+    .showcase .showcase-content p{
+      display: none;
+    }
+    .showcase img{
+      display: block;
+      width: 60%;
+    }
+              /*---------------- boxbar ----------------*/
+
+  .boxbar .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .boxbar .info-box{
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: var(--color-theme-light);
+    margin: 0 0.2rem;
+    flex: 1;
+    border-radius: 5px;
+  }         
+  .boxbar .info-box h6{
+    font-size: 0.9rem;
+  }
+
+  .boxbar .info-box img{
+    margin: 0.6rem;
+    width: 20%;
+  }
+
+  .boxbar .info-box p{
+    display: none;
+  }
+
 }
 
 
 /*----------------------------- responsive xs-578px -----------------------------*/
-@media (min-width: 578px) {
+@media only screen and (min-width: 578px) and (max-width: 767px) {
   /*---------------- header ----------------*/
 header{
 display: none;
@@ -610,11 +692,45 @@ font-size: 60px;
     display: block;
     width: 65%;
   }
+  
+  /*---------------- boxbar ----------------*/
+
+  .boxbar .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .boxbar .info-box{
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: var(--color-theme-light);
+    margin: 0 0.2rem;
+    flex: 1;
+    border-radius: 5px;
+  }         
+  .boxbar .info-box h6{
+    font-size: 0.9rem;
+  }
+
+  .boxbar .info-box img{
+    margin: 0.6rem;
+    width: 20%;
+  }
+
+  .boxbar .info-box p{
+    display: none;
+  }
+
 }
 
 /*----------------------------- responsive md-768px -----------------------------*/
-@media (min-width: 768px) {
-  /*---------------- header ----------------*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+        /*---------------- header ----------------*/
   header {
   display: inline;
   }
@@ -629,7 +745,7 @@ font-size: 60px;
     display: none;
   }
 
-  /*---------------- showcase ----------------*/ 
+        /*---------------- showcase ----------------*/ 
   .showcase .showcase-content h1{
     font-family: var(--font-play);
     font-size: var(--font-size-36);
@@ -642,10 +758,44 @@ font-size: 60px;
     display: block;
     width: 60%;
   }
-}
+
+  /*---------------- boxbar ----------------*/
+
+  .boxbar .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .boxbar .info-box{
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: var(--color-theme-light);
+    margin: 0 0.2rem;
+    flex: 1;
+    border-radius: 5px;
+  }         
+  .boxbar .info-box h6{
+    font-size: 0.9rem;
+  }
+
+  .boxbar .info-box img{
+    margin: 0.6rem;
+    width: 20%;
+  }
+
+  .boxbar .info-box p{
+    display: none;
+  }
+              
+}  
 
 /*----------------------------- responsive lg-992px -----------------------------*/
-@media (min-width: 992px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px){
   /*---------------- header ----------------*/
   header {
   display: inline;
@@ -662,26 +812,39 @@ font-size: 60px;
     display: block;
     width: 60%;
   }
+  /*---------------- boxbar ----------------*/
+
+  .boxbar .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .boxbar .info-box{
+    height: 110px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: var(--color-theme-light);
+    margin: 0 0.2rem;
+    flex: 1;
+    border-radius: 5px;
+  }         
+  .boxbar .info-box h6{
+    font-size: 0.9rem;
+  }
+
+  .boxbar .info-box img{
+    margin: 0.6rem;
+    width: 10%;
+  }
+
 }
-  /*---------------- boxbar ----------------*/ 
-  /*
-.boxbar .info-box{
-  height: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill minmax(200px, 300px));
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--color-theme-light);
-  margin: 0 0.8rem;
-  flex: 1;
-  border-radius: 5px;
-  font-size: 1rem;
-}         
-*/
-
-
 
 /*----------------------------- responsive xl-1200px -----------------------------*/
+
 @media (min-width: 1200px) {
   /*---------------- header ----------------*/
   header {
