@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33">
+  <g id="Google_login" data-name="Google login" transform="translate(-680 -856)">
+    <rect id="Rectangle_634" data-name="Rectangle 634" width="33" height="33" rx="6" transform="translate(680 856)" fill="#4285f4"/>
+    <g id="Google_icon" data-name="Google icon" transform="translate(684 860)">
+      <rect id="Rectangle_635" data-name="Rectangle 635" width="25.09" height="25.09" rx="2" fill="#fff"/>
+      <g id="G" transform="translate(4.676 4.65)">
+        <path id="Fill-8" d="M115.673,180.546a9.307,9.307,0,0,0-.135-1.591h-7.384v3.012h4.229a3.619,3.619,0,0,1-1.564,2.377V186.3h2.524a7.648,7.648,0,0,0,2.329-5.755" transform="translate(-100.324 -172.546)" fill="#4285f4"/>
+        <path id="Fill-10" d="M62.555,207.153a7.5,7.5,0,0,0,5.19-1.889l-2.524-1.956a4.749,4.749,0,0,1-7.061-2.48h-2.6v2.015a7.831,7.831,0,0,0,7,4.311" transform="translate(-54.725 -191.51)" fill="#34a853"/>
+        <path id="Fill-12" d="M52.724,168.179a4.689,4.689,0,0,1,0-2.994V163.17h-2.6a7.812,7.812,0,0,0,0,7.024Z" transform="translate(-49.29 -158.861)" fill="#fabb05"/>
+        <path id="Fill-14" d="M62.555,133.869a4.253,4.253,0,0,1,3,1.173h0l2.235-2.233a7.528,7.528,0,0,0-5.239-2.038,7.83,7.83,0,0,0-7,4.309l2.6,2.015a4.683,4.683,0,0,1,4.4-3.228" transform="translate(-54.725 -130.773)" fill="#e94235"/>
+      </g>
+    </g>
+  </g>
+</svg>

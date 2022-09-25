@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Shop clothes & shoes at Kenakata. We have a wide selection of styles from more than 600 brands.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenakata</title>
+        <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous" defer></script>
+    <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="scss/style.css" rel="stylesheet" >
+    <link href="https://unicons.iconscout.com/release-pro/v4.0.0/css/line.css" rel="stylesheet" >
+
+</head>
+<body>
+     <!----------------------------- header ----------------------------->
+    <header>
+        <div class="header-top">
+            <div class="container d-flex j-c a-i">
+                <div class="site-settings">
+                    <div class="dropdown dropdown-theme me-3">
+                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span id="selected-language">ENG</span><i class="fa-solid fa-chevron-down ms-3"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-theme">
+                            <li><a class="dropdown-item" href="#">ENG</a></li>
+                            <li><a class="dropdown-item" href="#">SWE</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown dropdown-theme me-3">
+                        <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <span id="selected-currency">EUR</span><i class="fa-solid fa-chevron-down ms-3"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-theme">
+                            <li><a class="dropdown-item" href="#">EUR</a></li>
+                            <li><a class="dropdown-item" href="#">USD</a></li>
+                            <li><a class="dropdown-item" href="#">SEK</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="header-top-links">
+                    <span class="top-links">
+                        <a href="#">Newsletter</a>
+                        <a href="#">Contact us</a>
+                        <a href="#">FAQs</a>
+                    </span>
+                    <span class="social-media">
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <div class="container d-flex j-c a-i">
+                <div class="brand">
+                    <a href="index.html"><img src="images/logotype.svg" alt="Kenakata"></a>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search products.." class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="links">
+                    <a class="link" href="/login.html"><i class="fa-regular fa-user me-2"></i>
+                        <span id="my-account">My account</span>
+                    </a>
+                    <a class="link" href="#"><i class="fa-regular fa-heart me-1"></i></a>
+                    <a class="link" href="#"><i class="fa-regular fa-shuffle me-1"></i>
+                        <span class="notification position-absolute translate-middle badge rounded-pill">
+                            0
+                          </span>
+                    </a>
+                    <a class="link" href="#"><i class="fa-regular fa-bag-shopping ms-1"></i>
+                        <span class="notification position-absolute translate-middle badge rounded-pill">
+                            0
+                          </span>
+                        <span id="cart-total">&nbsp;&nbsp;€9999.00</span>
+                    </a>
+                </div>
+            </div>
+        </div> 
+
+        <div class="header-bottom">
+            <nav>
+                <div class="container d-flex j-c a-i">
+                    <div class="categories">
+                        <div class="dropdown">
+                            <button type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="fa-solid fa-bars me-3"></i><span>Browse Categories</span><i class="fa-solid fa-chevron-down ms-4"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Computers</a></li>
+                                <li><a class="dropdown-item" href="#">TV & Display</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="offer">
+                        <button class="btn btn-theme">SPECIAL OFFER</button>
+                    </div>
+                </div>    
+            </nav>
+        </div>
+    </header>
+
+     <!----------------------------- header responsive ----------------------------->
+    <mobile>
+        <div class="header-responsive">
+            <div class="container">
+                <div class="brand">
+                    <a href="index.html"><img src="images/logotype.svg" alt="Kenakata"></a>
+                </div>
+                <div class="links">
+                    <a class="link" href="#"><i class="fa-regular fa-user me-2"></i></a>
+                    <a class="link" href="#"><i class="fa-regular fa-heart me-1"></i></a>
+                    <a class="link" href="#"><i class="fa-regular fa-shuffle me-1"></i>
+                        <span class="notification position-absolute translate-middle badge rounded-pill">
+                            0
+                          </span>
+                    </a>
+                    <a class="link" href="#"><i class="fa-regular fa-cart-shopping ms-1"></i>
+                        <span class="notification position-absolute translate-middle badge rounded-pill">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-navbar ">
+            <div class="cp-2 flex-shrink-1">
+                                <!-- The overlay -->
+                <div id="myNav" class="overlay">
+
+                    <!-- Button to close the overlay navigation -->
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                
+                    <!-- Overlay content -->
+                    <div class="overlay-content">
+                        <div class="categories">
+                            <a href="#">Computers</a>
+                            <a href="#">TV & Display</a>
+                        </div>
+                            <br>
+                            <br>
+                            <br>
+                        <div class="social">
+                            <a href="#">Newsletter</a>
+                            <a href="#">Contact us</a>
+                            <a href="#">FAQs</a>
+                            <span class="social-media">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            </span>  
+                        </div>
+                    </div>
+                
+                </div>
+                
+                <!-- Use any element to open/show the overlay navigation menu -->
+                <button onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <div class="p-2 w-100">
+                <span><input class="form-control" type="search" placeholder="Search" aria-label="Search" type="submit"></span> 
+            </div>
+        </div>
+    </mobile>
+
+    <!----------------------------- section my-account ----------------------------->
+    <section class="my-account-bar">
+        <div class="container d-flex j-c a-i">
+            <h4>My Account</h4>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="/index.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">My account</li>
+                </ol>
+              </nav>
+        </div>   
+    </section>
+
+    <section class="my-account">
+        <div class="container d-flex j-c">
+            <div class="card-login">
+                <h4>LOGIN</h4>
+                <form id="signinForm">
+                    <div class="mb-4">
+                        <label for="signin_email">E-mail adress <span class="required">*</span></label>
+                        <input id="signin_email"  type="text" placeholder="Javadov@" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="signin_password">Password <span class="required">*</span></label>
+                        <input id="signin_password"  type="password" placeholder="test" required>
+                    </div>
+                </form>
+                <div class="mb-4 d-grid">
+                    <button href="#" class="btn btn-theme">LOG IN</button>
+                </div> 
+                <div class="mb-4 password-settings d-flex j-c a-i">
+                    <div><input id="signin_rememberMe" type="checkbox"> 
+                         <label for="signin_rememberMe">Remember me</label>
+                    </div>
+                    <div><a href="#">Lost your password?</a></div>
+                </div>
+                <div class="mb-4 alternative-login d-flex j-c a-i"> 
+                    <hr>
+                    <div class="testtest">
+                        <h6>OR LOGIN WITH</h6>
+                    </div>
+                    <hr>
+                </div>    
+                <div class="d-flex j-c a-i">
+                   <a href=""><img src="/images/fb.svg" alt=""></a>
+                   <a href=""><img src="/images/google.svg" alt=""></a>  
+                </div>
+            </div>   
+            <div class="card-login">
+                <h4>REGISTER</h4>
+                <p class="card-text-small">
+                    Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.
+                </p>
+                <form id="signupForm">
+                    <div class="mb-4">
+                        <label for="signup_firstName">Firstname <span class="required">*</span></label>
+                        <input id="signup_firstName"  type="text" placeholder="Elvin" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="signup_lastName">Lastname <span class="required">*</span></label>
+                        <input id="signup_lastName"  type="text" placeholder="Javadov" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="signup_email">E-mail adress <span class="required">*</span></label>
+                        <input id="signup_email"  type="text" placeholder="Javadov@ " required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="signup_password">Password <span class="required">*</span></label>
+                        <input id="signup_password"  type="password" placeholder="test" required>
+                    </div>
+                </form>
+                <p class="mb-4 card-text-medium">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="">privacy policy.</a></p>
+                <div class="d-grid">
+                    <button href="#" class="btn btn-theme">REGISTER</button>
+                </div> 
+            </div>
+         </div>
+    </section>
+
+    <!----------------------------- responsive credit - https://codepen.io/ig_design/pen/KKVQpVP ----------------------------->
+
+	<section class="mobile-login">
+		<div class="container">
+			<div class="row full-height justify-content-center">
+				<div class="col-12 text-center align-self-center py-5">
+					<div class="section pb-5 pt-5 pt-sm-2 text-center">
+						<h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+			          	<label for="reg-log"></label>
+						<div class="card-3d-wrap mx-auto">
+							<div class="card-3d-wrapper">
+								<div class="card-front">
+                                    <div class="card-login">
+                                        <h4>LOGIN</h4>
+                                        <form id="signinForm_mobil">
+                                            <div class="mb-4">
+                                                <label for="signin_mobil_email">E-mail adress <span class="required">*</span></label>
+                                                <input id="signin_mobil_email"  type="text" placeholder="Javadov@" required>
+                                            </div>
+                                            <div class="mb-4">
+                                                <label for="signin_mobil_password">Password <span class="required">*</span></label>
+                                                <input id="signin_mobil_password"  type="password" placeholder="*****" required>
+                                            </div>
+                                        </form>
+                                        <div class="mb-4 d-grid">
+                                            <button href="#" class="btn btn-theme">LOG IN</button>
+                                        </div> 
+                                        <div class="mb-4 password-settings d-flex j-c a-i">
+                                            <div><input id="signin_rememberMe" type="checkbox"> 
+                                                 <label for="signin_rememberMe">Remember me</label>
+                                            </div>
+                                            <div><a href="#">Lost your password?</a></div>
+                                        </div>
+                                        <div class="mb-4 alternative-login d-flex j-c a-i"> 
+                                            <hr>
+                                            <div class="testtest">
+                                                <h6>OR LOGIN WITH</h6>
+                                            </div>
+                                            <hr>
+                                        </div>    
+                                        <div class="d-flex justify-content-evenly a-i">
+                                           <a href=""><img src="/images/fb-mobile.svg" alt=""></a>
+                                           <a href=""><img src="/images/google-mobile.svg" alt=""></a>  
+                                        </div>
+                                    </div>  
+			      				</div>
+								<div class="card-back">
+                                    <div class="card-login">
+                                        <h4>REGISTER</h4>
+                                        <p class="card-text-small">
+                                            Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.
+                                        </p>
+                                        <form id="signupForm_mobil">
+                                            <div class="mb-4">
+                                                <label for="signup_mobil_firstName">Firstname <span class="required">*</span></label>
+                                                <input id="signup_mobil_firstName"  type="text" placeholder="Elvin" required>
+                                            </div>
+                                            <div class="mb-4">
+                                                <label for="signup_mobil_lastName">Lastname <span class="required">*</span></label>
+                                                <input id="signup_mobil_lastName"  type="text" placeholder="Javadov" required>
+                                            </div>
+                                            <div class="mb-4">
+                                                <label for="signup_mobil_email">E-mail adress <span class="required">*</span></label>
+                                                <input id="signup_mobil_email"  type="text" placeholder="Javadov@ " required>
+                                            </div>
+                                            <div class="mb-4">
+                                                <label for="signup_mobil_password">Password <span class="required">*</span></label>
+                                                <input id="signup_mobil_password"  type="password" placeholder="*****" required>
+                                            </div>
+                                        </form>
+                                        <p class="mb-4 card-text-medium">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="">privacy policy.</a></p>
+                                        <div class="d-grid">
+                                            <button href="#" class="btn btn-theme">REGISTER</button>
+                                        </div> 
+                                    </div>
+			      				</div>
+			      			</div>
+			      		</div>
+			      	</div>
+		      	</div>
+	      	</div>
+	    </div>
+	</section>
+
+    <!----------------------------- footer ----------------------------->
+    <footer class="copyright">
+        <div class="container d-flex j-c a-i ">
+                <p>© Copyright 2022 Kenkata</p>
+        </div>   
+    </footer>
+    
+    <script src="script.js"></script> 
+</body>
+</html>
