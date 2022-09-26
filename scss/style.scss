@@ -293,24 +293,42 @@ html, body {
 
 .header-center .search{
     flex: 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 60px 0 60px;
 }
 
-.header-center .search .search-bar{
-    flex: 20;
-    border: solid 0.5px var(--color-gray-2);
-    border-radius: 10px 0 0 10px;
+.header-center .search #searchboxForm {
+  position: relative;
+  height: 45px;
+  margin: auto;
+  border-radius: var(--border-radius-medium);
 }
-.header-center .search i{
-    flex: 1;
-    margin: 2px;
-    background-color: var(--color-theme);
-    background-size: 150px;
-    width: 100%;
-    border-radius: 0 10px 10px 0;
+
+.header-center .search #searchboxForm input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--color-gray-2);
+  border-radius: var(--border-radius-medium);
+  outline: none;
+  font-size: 0.9em;
+  padding-left: 1.3rem;
+}
+
+.header-center .search #searchboxForm button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50px;
+  background-color: var(--color-theme);
+  color: var(--color-white);
+  border: none;
+  border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0 ;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.header-center .search #searchboxForm button:hover {
+  background-color: var(--color-theme-dark);
 }
 
 .header-center .links{
@@ -334,7 +352,7 @@ html, body {
   background-color: var(--color-theme);
 }
 
-.header-center .links .link .notification:hover {
+.header-center .links .link:hover .notification {
   color: var(--color-white);
   background-color: var(--color-theme-dark);
 }
@@ -460,23 +478,14 @@ background-color: var(--color-gray-3);
   transition:  0.2s ease-in-out;
 }
 
-.boxbar .info-box h6{
-  color: var(--color-theme);
-}
-
-.boxbar .info-box img{
-  margin: 0.6rem;
-}
-
 .boxbar .info-box:hover{
   background-color: var(--color-theme);
   color: var(--color-white);
   transition:  0.2s ease-in-out;
 }
 
-.boxbar .info-box:hover h6{
-  color: var(--color-white);
-  transition:  0.2s ease-in-out;
+.boxbar .info-box img{
+  margin: 0.6rem;
 }
 
 .boxbar .info-box:hover img{
@@ -484,8 +493,20 @@ background-color: var(--color-gray-3);
   transition:  0.2s ease-in-out;
 }
 
-/*----------------------------- shop-by-category -----------------------------*/
+.boxbar .info-box h6{
+  color: var(--color-theme);
+}
 
+.boxbar .info-box:hover h6{
+  color: var(--color-white);
+  transition:  0.2s ease-in-out;
+}
+
+.boxbar .info-box p {
+  width: 95%;
+}
+
+/*----------------------------- shop-by-category -----------------------------*/
 .shop-by-category .grid{
   display: grid;
   grid-template-columns: repeat(5, 249px);
@@ -605,6 +626,7 @@ height: 5rem;
 .card-menu li a{
   color: var(--color-gray-0);
 }
+
       .card-menu li a:hover{
         color: var(--color-theme);
 
@@ -746,8 +768,6 @@ margin-bottom: 0.6rem;
 .featured-products {
   margin-top: 4rem;
 } 
-
-
  
   /*----------------------------- flash-sale -----------------------------*/
 
@@ -906,15 +926,15 @@ margin-bottom: 0.6rem;
   }
         .card-xx .card-menu li a:hover{
           color: var(--color-theme);
-  
         }
   
   .card-xx .card-menu li p{
     display: none;
-    width: 120px;
+    align-items: baseline;
+    width: 100px;
     border-radius: 5px;
     background-color: var(--color-theme);
-    font-size: 14px;
+    font-size: 12px;
     color: var(--color-white);
     padding: 0.5rem 1rem 0.5rem 1rem;
   }
@@ -924,6 +944,18 @@ margin-bottom: 0.6rem;
   position: absolute;
   right: 50px;
 }   
+
+.card-xx > .card-menu li:hover p::after{
+  content:"";
+  position: absolute;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-left: 26px solid var(--color-theme);
+  border-bottom: 13px solid transparent;
+  margin: -4px 0 0 73px;
+} 
 
 .card-xx .card-body-l {
   flex: 1 1 auto;
@@ -1143,6 +1175,18 @@ margin-bottom: 0.6rem;
 .card-login h4 {
   margin-bottom: 2rem;
 }
+
+.card-login .password-settings a {
+  color: var(--color-theme);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card-login .password-settings a:hover {
+  color: var(--color-theme-dark);
+  text-decoration: underline;
+}
+
 .card-login .card-text-small {
   font-size: 14px;
   color: #777777;
@@ -1177,6 +1221,10 @@ margin-bottom: 0.6rem;
 #signupForm input:focus {
   outline: 0;
   box-shadow: 0 0 2px 0 var(--color-theme-dark);
+}
+
+.password-settings .checkbox{
+  position: relative;
 }
 
 .password-settings a {
@@ -1223,15 +1271,15 @@ h6 span{
   text-transform: uppercase;
   font-weight: 700;
 }
-.section{
+.mobile-login .section{
   position: relative;
   width: 100%;
   display: block;
 }
 
 
-[type="checkbox"]:checked,
-[type="checkbox"]:not(:checked){
+.section > [type="checkbox"]:checked,
+.section > [type="checkbox"]:not(:checked){
   position: absolute;
   left: -9999px;
 }
@@ -1390,11 +1438,6 @@ h6 span{
     }
 
     .mobile-navbar {
-      width: 100%;
-      height: 3rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       border-top: solid 0.8px var(--color-gray-2);
       border-bottom: solid 0.8px var(--color-gray-2); 
     }
@@ -1410,6 +1453,42 @@ h6 span{
     .mobile-navbar button:hover {
       background-color: var(--color-theme-dark);
     }  
+
+    .mobile-navbar .search #searchboxForm {
+      position: relative;
+      height: 2.1rem;
+      margin: auto;
+      border-radius: var(--border-radius-medium);
+    }
+    
+    .mobile-navbar .search #searchboxForm input {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      border: 1px solid var(--color-gray-2);
+      border-radius: 0  var(--border-radius-medium) var(--border-radius-medium) 0;
+      outline: none;
+      font-size: 0.9em;
+      padding-left: 1.3rem;
+    }
+    
+    .mobile-navbar .search #searchboxForm button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 30px;
+      background-color: var(--color-theme);
+      color: var(--color-white);
+      border: none;
+      border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0 ;
+      outline: none;
+      transition: 0.3s ease-in-out;
+    }
+    
+    .mobile-navbar .search #searchboxForm button:hover {
+      background-color: var(--color-theme-dark);
+    }
 
     /* The Overlay (background) */
   .overlay {
@@ -1601,6 +1680,16 @@ h6 span{
 .mobile-login{
   display: block;
 }
+.my-account-bar {
+  color: var(--color-theme);
+  background-color: #50546E;
+  height: 58px;
+}
+
+.my-account-bar .container {
+  text-align: center;
+  padding-top: 1rem;
+}
 
 }
 
@@ -1626,25 +1715,57 @@ height: 4rem;
 }
 
 .mobile-navbar {
-width: 100%;
-height: 3rem;
-display: flex;
-justify-content: space-between;
-align-items: center;
-border-top: solid 0.8px var(--color-gray-2);
-border-bottom: solid 0.8px var(--color-gray-2); 
+  border-top: solid 0.8px var(--color-gray-2);
+  border-bottom: solid 0.8px var(--color-gray-2); 
 }
 
 .mobile-navbar button {
-height: 2.3rem;
-width: 2.3rem;
-color: var(--color-white);
-background-color: var(--color-theme);
-border: solid;
+  height: 2.3rem;
+  width: 2.3rem;
+  color: var(--color-white);
+  background-color: var(--color-theme);
+  border: solid;
 }
+
 .mobile-navbar button:hover {
-background-color: var(--color-theme-dark);
+  background-color: var(--color-theme-dark);
 }  
+
+.mobile-navbar .search #searchboxForm {
+  position: relative;
+  height: 2.1rem;
+  margin: auto;
+  border-radius: var(--border-radius-medium);
+}
+
+.mobile-navbar .search #searchboxForm input {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 1px solid var(--color-gray-2);
+  border-radius: 0  var(--border-radius-medium) var(--border-radius-medium) 0;
+  outline: none;
+  font-size: 0.9em;
+  padding-left: 1.3rem;
+}
+
+.mobile-navbar .search #searchboxForm button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 30px;
+  background-color: var(--color-theme);
+  color: var(--color-white);
+  border: none;
+  border-radius: 0 var(--border-radius-medium) var(--border-radius-medium) 0 ;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.mobile-navbar .search #searchboxForm button:hover {
+  background-color: var(--color-theme-dark);
+}
 
 /* The Overlay (background) */
 .overlay {
