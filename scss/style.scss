@@ -176,15 +176,51 @@ html, body {
     word-wrap: break-word;
     background-color: var(--bs-card-bg);
     background-clip: border-box;
-    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
     border-radius: var(--bs-card-border-radius);
-    border: 1px solid;
     overflow: hidden;
   }
 
   .required {
     color: var(--color-theme);
   }
+
+  .rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    }
+    
+    .rating > input {
+    display:none;
+    }
+    
+    .rating > label {
+    position: relative;
+    width: 1.1em;
+    font-size: 1.5rem;
+    color: var(--color-theme);
+    cursor: pointer;
+    }
+    
+    .rating > label::before{
+    content: "\2605";
+    position: absolute;
+    opacity: 0;
+    }
+    
+    .rating > label:hover:before,
+    .rating > label:hover ~ label:before {
+    opacity: 1 !important;
+    }
+    
+    .rating > input:checked ~ label:before{
+    opacity: 1;
+    }
+    
+    .rating:hover > input:checked ~ label:before {
+    opacity: 0.4;
+    }
+
 /*----------------------------- Helpers -----------------------------*/ 
 .j-c {
     justify-content: space-between;
@@ -896,9 +932,7 @@ margin-bottom: 0.6rem;
     word-wrap: break-word;
     background-color: var(--bs-card-bg);
     background-clip: border-box;
-    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
     border-radius: var(--bs-card-border-radius);
-    border: 1px solid;
     overflow: hidden;
   }
 
@@ -1110,6 +1144,44 @@ margin-bottom: 0.6rem;
     width: 25rem;
   }
 
+  .subscribe #subscribe_box {
+    position: relative;
+    height: 45px;
+    margin: auto;
+    border-radius: var(--border-radius-medium);
+  }
+  
+  .subscribe #subscribe_box input {
+    position: relative;
+    height: 100%;
+    width: 80%;
+    border: 1px solid var(--color-gray-2);
+    border-radius: var(--border-radius-medium);
+    outline: none;
+    font-size: 0.9em;
+    padding-left: 1.3rem;
+  }
+  
+  .subscribe #subscribe_box button {
+    position: absolute;
+    top: 10%;
+    right: 20.7%;
+    height: 80%;
+    width: 100px;
+    background-color: var(--color-theme);
+    color: var(--color-white);
+    border: none;
+    border-radius: var(--border-radius-medium) ;
+    outline: none;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .subscribe #subscribe_box button:hover {
+    background-color: var(--color-theme-dark);
+  }
+  
+
+
 .space {
   flex: 1;
   height: 19.56rem;
@@ -1261,12 +1333,12 @@ margin-bottom: 0.6rem;
   margin: 0.2rem 0;
 }
 
-p {
+.mobile-login p {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.7;
 }
-h6 span{
+.mobile-login h6 span{
   padding: 0 20px;
   text-transform: uppercase;
   font-weight: 700;
@@ -1372,9 +1444,6 @@ h6 span{
   z-index: 20;
   display: block;
 }
-
-/*----------------------------- mobil-login -----------------------------*/
-
 
 /*----------------------------- responsive xxs-350px -----------------------------*/
 @media only screen and (min-width: 1px) and (max-width: 577px){
@@ -1680,6 +1749,7 @@ h6 span{
 .mobile-login{
   display: block;
 }
+
 .my-account-bar {
   color: var(--color-theme);
   background-color: #50546E;
@@ -1700,18 +1770,59 @@ h6 span{
 header{
 display: none;
 }    
+
 mobile{
 display: inline;
 }
+
+.header-responsive{
+  background-color: var(--color-white); 
+  height: 4rem;
+  }
+
 .header-responsive > .container{
 display: flex;
 justify-content: space-between;
 align-items: center;
 height: 100%;
 }
-.header-responsive{
-background-color: var(--color-white); 
-height: 4rem;
+
+.header-responsive .links {
+  flex: 3;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.header-responsive .links .link {
+  text-decoration: none;
+  color: var(--color-theme-dark);
+  margin: 0 0.3rem;
+}
+
+.header-responsive .links .link:hover {
+  color: var(--color-theme);
+}
+
+.header-responsive .links .link .notification {
+  background-color: var(--color-theme);
+}
+
+.header-responsive .links .link .notification:hover {
+  color: var(--color-white);
+  background-color: var(--color-theme-dark);
+}
+
+.header-responsive .links .link:last-child {
+  margin: 0;
+}
+
+.header-responsive .links .link i {
+  font-size: 16px;
+}
+
+.header-responsive .links .link span{
+  font-size: 10px;
 }
 
 .mobile-navbar {
@@ -1919,6 +2030,18 @@ font-size: 60px;
   display: block;
 }
 
+.my-account-bar {
+  color: var(--color-theme);
+  background-color: #50546E;
+  height: 58px;
+}
+
+.my-account-bar .container {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+
 
 }
 
@@ -1932,11 +2055,28 @@ font-size: 60px;
   display: none;
   }  
 
-   .header-center .links span{
+  
+  .header-center .links #my-account {
     display: none;
   }
+
+  .header-center .links #cart-total {
+    display: none;
+  }
+
   .header-bottom .dropdown button span{
     display: none;
+  }
+
+  .header-center .search{
+    flex: 6;
+}
+
+  .header-center .search #searchboxForm {
+    position: relative;
+    height: 35px;
+    margin-left: 2rem;
+    border-radius: var(--border-radius-medium);
   }
 
         /*---------------- showcase ----------------*/ 
@@ -2036,6 +2176,16 @@ font-size: 60px;
   display: block;
 }
 
+.my-account-bar {
+  color: var(--color-theme);
+  background-color: #50546E;
+  height: 58px;
+}
+
+.my-account-bar .container {
+  text-align: center;
+  padding-top: 1rem;
+}
               
 }  
 
@@ -2049,11 +2199,27 @@ font-size: 60px;
     display: none;
     }  
   
-     .header-center .links span{
+    .header-center .links #my-account {
       display: none;
     }
+  
+    .header-center .links #cart-total {
+      display: none;
+    }
+    
     .header-bottom .dropdown button span{
       display: none;
+    }
+  
+    .header-center .search{
+      flex: 8;
+  }
+  
+    .header-center .search #searchboxForm {
+      position: relative;
+      height: 35px;
+      margin-left: 3rem;
+      border-radius: var(--border-radius-medium);
     }
   
 
@@ -2150,6 +2316,16 @@ font-size: 60px;
   display: block;
 }
 
+.my-account-bar {
+  color: var(--color-theme);
+  background-color: #50546E;
+  height: 58px;
+}
+
+.my-account-bar .container {
+  text-align: center;
+  padding-top: 1rem;
+}
 
 }
 
