@@ -171,7 +171,7 @@
                     <button onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
                 </div>
                 <div class="search w-100">
-                    <form id="searchboxForm">
+                    <form id="searchboxForm_mobile">
                         <input id="query_mobile" type="text" placeholder="Search products..">
                         <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> 
                     </form>
@@ -200,16 +200,16 @@
                 <form id="signinForm">
                     <div class="mb-4">
                         <label for="signin_email">E-mail adress <span class="required">*</span></label>
-                        <input id="signin_email"  type="text" placeholder="Javadov@" required>
+                        <input id="signin_email" pattern="[^ @]*@[^ @]*" type="text" placeholder="Javadov@" required>
                     </div>
                     <div class="mb-4">
                         <label for="signin_password">Password <span class="required">*</span></label>
                         <input id="signin_password"  type="password" placeholder="*****" required>
                     </div>
+                    <div class="mb-4 d-grid">
+                        <button type="submit" class="btn btn-theme" >LOG IN</button>
+                    </div> 
                 </form>
-                <div class="mb-4 d-grid">
-                    <button href="#" class="btn btn-theme">LOG IN</button>
-                </div> 
                 <div class="mb-4 password-settings d-flex j-c a-i">
                     <div><input id="signin_rememberMe" type="checkbox"> 
                          <label for="signin_rememberMe">Remember me</label>
@@ -218,7 +218,7 @@
                 </div>
                 <div class="mb-4 alternative-login d-flex j-c a-i"> 
                     <hr>
-                    <div class="testtest">
+                    <div class="button_margin">
                         <h6>OR LOGIN WITH</h6>
                     </div>
                     <hr>
@@ -230,10 +230,11 @@
             </div>   
             <div class="card-login">
                 <h4>REGISTER</h4>
-                <p class="card-text-small">
-                    Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.
-                </p>
+
                 <form id="signupForm">
+                    <p class="card-text-small">
+                        Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.
+                    </p>
                     <div class="mb-4">
                         <label for="signup_firstName">Firstname <span class="required">*</span></label>
                         <input id="signup_firstName"  type="text" placeholder="Elvin" required>
@@ -250,11 +251,12 @@
                         <label for="signup_password">Password <span class="required">*</span></label>
                         <input id="signup_password"  type="password" placeholder="*****" required>
                     </div>
+                    <p class="mb-4 card-text-medium">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="">privacy policy.</a></p>
+                    <div class="d-grid">
+                        <button href="#" class="btn btn-theme">REGISTER</button>
+                    </div> 
+    
                 </form>
-                <p class="mb-4 card-text-medium">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="">privacy policy.</a></p>
-                <div class="d-grid">
-                    <button href="#" class="btn btn-theme">REGISTER</button>
-                </div> 
             </div>
          </div>
     </section>
@@ -274,19 +276,19 @@
 								<div class="card-front">
                                     <div class="card-login">
                                         <h4>LOGIN</h4>
-                                        <form id="signinForm_mobil">
+                                        <form id="signinForm_mobile">
                                             <div class="mb-4">
-                                                <label for="signin_mobil_email">E-mail adress <span class="required">*</span></label>
-                                                <input id="signin_mobil_email"  type="text" placeholder="Javadov@" required>
+                                                <label for="signin_mobile_email">E-mail adress <span class="required">*</span></label>
+                                                <input id="signin_mobile_email"  type="text" placeholder="Javadov@" required>
                                             </div>
                                             <div class="mb-4">
-                                                <label for="signin_mobil_password">Password <span class="required">*</span></label>
-                                                <input id="signin_mobil_password"  type="password" placeholder="*****" required>
+                                                <label for="signin_mobile_password">Password <span class="required">*</span></label>
+                                                <input id="signin_mobile_password"  type="password" placeholder="*****" required>
                                             </div>
+                                            <div class="mb-4 d-grid">
+                                                <button type="submit" class="btn btn-theme">LOG IN</button>
+                                            </div> 
                                         </form>
-                                        <div class="mb-4 d-grid">
-                                            <button href="#" class="btn btn-theme">LOG IN</button>
-                                        </div> 
                                         <div class="mb-4 password-settings d-flex j-c a-i">
                                             <div><input id="signin_rememberMe" type="checkbox"> 
                                                  <label for="signin_rememberMe">Remember me</label>
@@ -295,7 +297,7 @@
                                         </div>
                                         <div class="mb-4 alternative-login d-flex j-c a-i"> 
                                             <hr>
-                                            <div class="testtest">
+                                            <div class="button_margin">
                                                 <h6>OR LOGIN WITH</h6>
                                             </div>
                                             <hr>
@@ -309,31 +311,31 @@
 								<div class="card-back">
                                     <div class="card-login">
                                         <h4>REGISTER</h4>
-                                        <p class="card-text-small">
-                                            Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.
-                                        </p>
-                                        <form id="signupForm_mobil">
+                                        <form id="signupForm_mobile">
+                                            <p class="card-text-small">
+                                                Registering for this site allows you to access your order status and history. Just fill in the fields below, and we’ll get a new account set up for you in no time. We will only ask you for information necessary to make the purchase process faster and easier.
+                                            </p>
                                             <div class="mb-4">
-                                                <label for="signup_mobil_firstName">Firstname <span class="required">*</span></label>
-                                                <input id="signup_mobil_firstName"  type="text" placeholder="Elvin" required>
+                                                <label for="signup_mobile_firstName">Firstname <span class="required">*</span></label>
+                                                <input id="signup_mobile_firstName"  type="text" placeholder="Elvin" required>
                                             </div>
                                             <div class="mb-4">
-                                                <label for="signup_mobil_lastName">Lastname <span class="required">*</span></label>
-                                                <input id="signup_mobil_lastName"  type="text" placeholder="Javadov" required>
+                                                <label for="signup_mobile_lastName">Lastname <span class="required">*</span></label>
+                                                <input id="signup_mobile_lastName"  type="text" placeholder="Javadov" required>
                                             </div>
                                             <div class="mb-4">
-                                                <label for="signup_mobil_email">E-mail adress <span class="required">*</span></label>
-                                                <input id="signup_mobil_email"  type="text" placeholder="Javadov@ " required>
+                                                <label for="signup_mobile_email">E-mail adress <span class="required">*</span></label>
+                                                <input id="signup_mobile_email"  type="text" placeholder="Javadov@ " required>
                                             </div>
                                             <div class="mb-4">
-                                                <label for="signup_mobil_password">Password <span class="required">*</span></label>
-                                                <input id="signup_mobil_password"  type="password" placeholder="*****" required>
+                                                <label for="signup_mobile_password">Password <span class="required">*</span></label>
+                                                <input id="signup_mobile_password"  type="password" placeholder="*****" required>
                                             </div>
+                                            <p class="mb-4 card-text-medium">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="">privacy policy.</a></p>
+                                            <div class="d-grid">
+                                                <button type="submit" class="btn btn-theme">REGISTER</button>
+                                            </div> 
                                         </form>
-                                        <p class="mb-4 card-text-medium">Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="">privacy policy.</a></p>
-                                        <div class="d-grid">
-                                            <button href="#" class="btn btn-theme">REGISTER</button>
-                                        </div> 
                                     </div>
 			      				</div>
 			      			</div>
